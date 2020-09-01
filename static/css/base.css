@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/foamroller.jpeg') no-repeat center fixed;
+    background: url('/media/sport.jpg') no-repeat center fixed;
     background-size: cover;
     height: calc(100vh-164px);
     color: darkgray;
@@ -22,13 +22,13 @@ body {
 }
 
 .shop-button {
-background: black;
+background: salmon;
 color: white;
 min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-color {
+    background: salmon;
     color: white;
 }
 
@@ -36,9 +36,9 @@ min-width: 260px;
 .shop-button:hover,
 .shop-button:active,
 .shop-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-color:hover,
+.btn-color:active,
+.btn-color:focus {
     background: #222;
     color: white;
 }
