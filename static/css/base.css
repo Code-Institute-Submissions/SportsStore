@@ -22,13 +22,13 @@ body {
 }
 
 .shop-button {
-background: salmon;
+background: rgb(252, 98, 81);
 color: white;
 min-width: 260px;
 }
 
 .btn-color {
-    background: salmon;
+    background: rgb(252, 98, 81);
     color: white;
 }
 
@@ -39,7 +39,7 @@ min-width: 260px;
 .btn-color:hover,
 .btn-color:active,
 .btn-color:focus {
-    background: #222;
+    background: salmon;
     color: white;
 }
 
