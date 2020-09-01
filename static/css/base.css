@@ -1,0 +1,83 @@
+html {
+    height: 100%
+}
+
+body {
+    background: url('/media/foamroller.jpeg') no-repeat center fixed;
+    background-size: cover;
+    height: calc(100vh-164px);
+    color: darkgray;
+
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-button {
+background: black;
+color: white;
+min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+
+.shop-button:hover,
+.shop-button:active,
+.shop-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+
+
+
+
+
+
+/* --- Media Queries --- */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+.header-container {
+    padding-top: 164px;
+}
+
+}

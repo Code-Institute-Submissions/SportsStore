@@ -14,6 +14,7 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block extracss %}
@@ -33,10 +34,10 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div id="navbar" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-        <h2 class="logo-font text-black my-0"><strong>AOB</strong><sub><i>Sports</i></sub></h2>
+        <h2 class="text-black my-0"><strong>AOB</strong><sub><i>Sports</i></sub></h2>
         </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -56,9 +57,41 @@
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-            <li class="list-inline-item dropdown"></li>
-            <li class="list-inline-item"></li>
-        
+              <li class="list-inline-item">
+            <a class="{% if grandtotal %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+            <div class="text-center">
+                <div><i class="fa fa-shopping-cart fa-lg"></i></div>
+                <p class="my-0">
+                    {% if grandtotal %}
+                        ${{ grandtotal|floatformat:2 }}
+                        {% else %}
+                        €0.00
+                        {% endif %}
+                    </p>
+            </div>
+            </a>
+            </li>
+            <li class="list-inline-item dropdown">
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fa fa-user-circle fa-lg"></i> Account</div>
+                    <p class="my-0"></p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.isauthenticated %}
+                {% if request.user.issuperuser %}
+                <a href="" class="dropdown-item">Manage Products</a>
+                {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+            </div>
+            </li>
+        </ul>
         </div>
         </div>
     
