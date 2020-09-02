@@ -1,0 +1,39 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "name":"Pink Foam Roller",
+         "description":"Pink Foam Roller",
+         "price": 7.99,
+         "category":1,
+         "colour":"Pink",
+         "image":"foamrollerpink.jpg"
+      }
+   },
+     {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "name":"Purple Foam Roller",
+         "description":"Purple Foam Roller",
+         "price": 7.99,
+         "category":1,
+         "colour":"Purple",
+         "image":"foamrollerpurple.jpg"
+      }
+   },
+      {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "name":"Black Foam Roller",
+         "description":"Black Foam Roller",
+         "price": 7.99,
+         "category":1,
+         "colour":"Black",
+         "image":"foamrollerblack"
+      }
+   }
+]
+   

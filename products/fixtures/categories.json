@@ -1,0 +1,26 @@
+[
+   {
+      "pk":1,
+      "model":"products.category",
+      "fields":{
+         "name":"foamrollers",
+         "friendly_name":"Foam Rollers"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.category",
+      "fields":{
+         "name":"tapes",
+         "friendly_name":"Physio Tape"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.category",
+      "fields":{
+         "name":"supports",
+         "friendly_name":"Support Bandages"
+      }
+   }
+]
