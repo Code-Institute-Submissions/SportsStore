@@ -38,7 +38,7 @@
         <div id="navbar" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-        <h2 class="text-black my-0"><strong>AOB</strong><sub><i>Sports</i></sub></h2>
+        <h2 class="text-secondary my-0"><strong>AOB</strong><sub><i>Sports</i></sub></h2>
         </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -59,10 +59,10 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item">
-            <a class="{% if grandtotal %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+            <a class="{% if grandtotal %}text-info font-weight-bold{% else %}text-secondary{% endif %} nav-link" href="">
             <div class="text-center">
-                <div><i class="fa fa-shopping-cart fa-lg"></i></div>
-                <p class="my-0">
+                <div><i class="fa fa-shopping-cart"></i></div>
+                <p class="my-auto">
                     {% if grandtotal %}
                         ${{ grandtotal|floatformat:2 }}
                         {% else %}
@@ -73,10 +73,10 @@
             </a>
             </li>
             <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="text-secondary nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
-                    <div><i class="fa fa-user fa-lg"></i></div>
-                    <p class="my-0">Account</p>
+                    <div><i class="fa fa-user"></i></div>
+                    <p class="my-auto">Account</p>
                 </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -95,7 +95,16 @@
         </ul>
         </div>
         </div>
+        <div class="row bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            {% include 'includes/mobiletopheader.html' %}
+            {% include 'includes/mainnav.html' %}
+        </nav>
     
+        </div>
     </header>
 
     
