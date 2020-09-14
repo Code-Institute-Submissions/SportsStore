@@ -43,6 +43,12 @@ min-width: 260px;
     color: white;
 }
 
+.banner {
+    background: rgb(252, 98, 81);
+    color: white;
+}
+}
+
 
 .text-black {
     color: #000 !important;
@@ -52,8 +58,24 @@ min-width: 260px;
     border: 1px solid black !important;
 }
 
+.productsbackground {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
 
-
+.cropimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:  300px;
+    height: 300px;
+    object-fit: scale-down;
+}
 
 
 
