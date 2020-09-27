@@ -28,8 +28,29 @@ min-width: 260px;
 }
 
 .btn-color {
-    background: rgb(252, 98, 81);
+    background: #fc6251;
     color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+ display: flex;
+	background: linear-gradient(
+		-45deg, 
+        grey 25%,
+        grey 25%,
+		grey 25%, 
+		#ff7465 25%, 
+	    #ff7465 50%, 
+		grey 50%, 
+		grey 75%, 
+		#ff7465 75%, 
+		#ff7465);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 
