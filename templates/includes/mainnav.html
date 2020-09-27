@@ -24,10 +24,13 @@
             </a>
         </li>
 
-        <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-secondary mr-3" href="#">
+        <li class="nav-item dropdown">
+             <a class="logo-font font-weight-bold nav-link text-secondary mr-5" href="{% url 'products' %}" id="specials" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              SPECIAL OFFERS
             </a>
+             <div class="dropdown-menu border-0" aria-labelledby="productdrop" ria-haspopup="true" aria-expanded="false">
+            <a href="{% url 'products' %}?category=saleitems" class="dropdown-item">Summer Sale!</a>
+             </div>
         </li>
     </ul>
 </div>
