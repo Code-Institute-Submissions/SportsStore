@@ -38,18 +38,18 @@
         <div id="navbar" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-        <h3 class="logo my-0"><strong><i>AOB Sports Massage & Supplies</strong></i></h3>
+        <h3 class="logo my-0"><strong><i>AOB Sports</strong></i></h3>
         </a>
         </div>
        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-        <h2 class="logo my-0"><strong><sub><i>AOB SPORTS</strong></i></sub></h2>
+        <h2 class="logo my-0">Andrew O'Brien Sports Massage</h2>
         </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item">
-            <a class="{% if grandtotal %}text-info font-weight-bold{% else %}text-secondary{% endif %} nav-link" href="">
+            <a class="{% if grandtotal %}text-info font-weight-bold{% else %}text-secondary{% endif %} nav-link" href="{% url 'viewcart' %}">
             <div class="text-center">
                 <div><i class="fa fa-shopping-cart"></i></div>
                 <p class="my-auto">
@@ -96,8 +96,8 @@
     
         </div>
             <div id="delivery-banner" class="row text-center">
-            <div class="col banner">
-                <h4 class="logo-font my-1"></h4>                
+            <div class="col banner d-none d-lg-block d-xl-block">
+                <h4 class="my-0">Free Delivery on Orders Over €{{ freedelivery }}</h4>                
             </div>            
         </div>
     </header>
