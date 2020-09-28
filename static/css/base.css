@@ -54,6 +54,15 @@ a {
 }
 
 
+.remove-item {
+    cursor: pointer;
+    background: rgb(252, 98, 81);
+    color: white;
+    min-width: 40px;
+    text-decoration: none;
+}
+
+
 .shop-button:hover,
 .shop-button:active,
 .shop-button:focus,
