@@ -1,11 +1,25 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products.models import Product
 
 def cartcontents(request):
 
     cartitems = []
     total = 0
     productcount = 0
+    cart = request.session.get('cart', {})
+
+
+    for item_id, quantity in cart.items():
+        product = get_object_or_404 (Product, pk=item_id)
+        total += quantity * product.price
+        productcount += quantity
+        cartitems.append ({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
 
     if total < settings.FREEDELIVERY:
         delivery = total * Decimal(settings.STANDARDDELIVERY / 100)
