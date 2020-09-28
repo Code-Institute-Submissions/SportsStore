@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 # Create your views here.
 
@@ -20,3 +20,14 @@ def addtocart(request, item_id):
 
     request.session['cart'] = cart
     return redirect (redirect_url)
+
+
+
+def removefromcart(request, item_id):
+
+    cart = request.session.get('cart', {})
+
+    cart.pop(item_id)
+
+    request.session['cart'] = cart
+    return HttpResponse(status=200)
