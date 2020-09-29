@@ -42,7 +42,7 @@ def _generate_order_number(self):
 
 
 def update_total(self):
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREEDELIVERY:
             self.delivery_cost = self.order_total * settings.STANDARDDELIVERY / 100
         else:
