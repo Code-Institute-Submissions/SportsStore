@@ -14,7 +14,6 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-
     if request.method == 'POST':
         cart = request.session.get('cart', {})
 
@@ -31,9 +30,9 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-           order = order_form.save()
-        for item_id, item_data in cart.items():
-                 try:
+            order = order_form.save()
+            for item_id, item_data in cart.items():
+                try:
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
@@ -43,19 +42,20 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                            order_line_item.save()
-                            
-    request.session['save_info'] = 'save-info' in request.POST  
+                        order_line_item.save()
+                except:
+                    messages.error(request, 'There was an error.')
+
+            request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkoutsuccess', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-        else:
-            cart = request.session.get('cart', {})
+    else:
+        cart = request.session.get('cart', {})
         if not cart:
             messages.error(request, "Your Cart is Empty")
             return redirect(reverse('products'))
-
 
     currentcart = cartcontents(request)
     total = currentcart['grand_total']
@@ -78,7 +78,7 @@ def checkout(request):
 
 
 def checkoutsuccess(request, order_number):
-  
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order Successful! \
