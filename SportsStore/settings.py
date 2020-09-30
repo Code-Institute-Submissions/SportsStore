@@ -26,7 +26,7 @@ SECRET_KEY = 'ip(gyw7re)b-wrz07tx!(x&$qa((1*q767-g$^flvz_yn!3e$j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aobsportsstore.herokuapp.com', 'localhost']
 
 
 # Application definition
