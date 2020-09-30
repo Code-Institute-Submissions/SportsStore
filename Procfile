@@ -1,1 +1,1 @@
-web: gunicorn SportsStore.wsgi:application
+web: gunicorn aobsportsstore.wsgi:application
