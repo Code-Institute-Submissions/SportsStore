@@ -1,0 +1,1 @@
+web: gunicorn aobsportsstore.wsgi:application
