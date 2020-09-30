@@ -65,6 +65,26 @@
             </div>
             </a>
             </li>
+               <li class="list-inline-item dropdown">
+            <a class="text-secondary nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fa fa-user"></i></div>
+                    <p class="my-auto">Account</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.isauthenticated %}
+                {% if request.user.issuperuser %}
+                <a href="" class="dropdown-item">Manage Products</a>
+                {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+            </div>
+            </li>
         </ul>
         </div>
         </div>
