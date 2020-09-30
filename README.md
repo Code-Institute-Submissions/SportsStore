@@ -73,9 +73,20 @@ The site is linked directly with stripe and uses webhooks for intelligent error 
 
 ## Wireframes
 
-1. Home Page Desktop [here]()
-1. Home Page Mobile [here]()
-
+1. Home Page Desktop [here](wireframes/homedesktop.JPG)
+2. Home Page Mobile [here](wireframes/homedesktop.JPG)
+3. About Page Desktop [here](wireframes/aboutdesktop.JPG)
+4. About Page Mobile [here](wireframes/aboutmobile.JPG)
+5. Appointments Desktop [here](wireframes/appointmentsdesktop.JPG)
+6. Appointments Mobile [here](wireframes/appointmentsmobile.JPG)
+7. Checkout Desktop [here](wireframes/checkoutdesktop.JPG)
+8. Checkout Mobile [here](wireframes/checkoutmobile.JPG)
+9. Products Desktop [here](wireframes/productsdesktop.JPG)
+10. Products Mobile [here](wireframes/productsmobile.JPG)
+11. Product Details Desktop [here](wireframes/productdetailsdesktop.JPG)
+12. Product Details Mobile [here](wireframes/productdetailsmobile.JPG)
+13. Shopping Cart Desktop [here](wireframes/shoppingcartdesktop.JPG)
+14. Shopping Cart Mobile [here](wireframes/shoppingcartmobile.JPG)
 
 
 ## Features
