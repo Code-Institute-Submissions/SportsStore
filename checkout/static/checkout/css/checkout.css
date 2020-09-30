@@ -20,3 +20,14 @@
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+
+.successthanks {
+    margin-top: 200px;
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.successconfirm {
+    color: grey;
+}
