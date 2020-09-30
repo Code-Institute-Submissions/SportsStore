@@ -210,7 +210,7 @@ Browser Test | Outcome
 GitHub was used to develop the project, store code in the repository and maintain the version control of this project. 
 The live demo has been deployed using Heroku and all versions pushed to the master branch on github are automatically deployed the Heroku Master.
 
-The following steps were used to deploy the Wexford Slang Dictionary on Heroku:
+The following steps were used to deploy the AOB Sports Store on Heroku:
 
 1. Created an App Name
 2. Logged into Heroku using $ heroku login creating a connection between Github and the Heroku application
@@ -225,7 +225,7 @@ The following steps were used to deploy the Wexford Slang Dictionary on Heroku:
 11. Ran my application using $ heroku ps:scale web=1 to scale dynos
 12. Logged into Heroku and set up the Config Variables in the settings > config variables section (IP & PORT)
 13. Application Deployed
-14. The link generated can be used instantly. The link generated for this site as: https://wexforddictionaryproject.herokuapp.com/
+14. The link generated can be used instantly. The link generated for this site as: https://aobsportsstore.herokuapp.com/
 15. I connected my Heroku App to github to automatically deploy from the master branch, I managed the build through github then would test the app through heroku every few commits/pushes. 
 
 
@@ -269,7 +269,7 @@ The following are the other Technologies used throughout the build process:
 
 ## View Project
 
-* The code used to develop this slang dictionary application can be viewed [here](https://github.com/Murphj99/SportsStore)
+* The code used to develop this E-commerce application can be viewed [here](https://github.com/Murphj99/SportsStore)
 * The live version of the application was deployed using [Heroku](https://dashboard.heroku.com/apps/aobsportsstore) and can be viewed here [AOBSports](https://aobsportsstore.herokuapp.com/)
 
 
