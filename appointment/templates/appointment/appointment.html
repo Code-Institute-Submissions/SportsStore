@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+​
+{% block pageheader %}
+​
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+​
+{% endblock %}
+​
+{% block content %}
+<div class="productsbackground"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo mb-4">Contact Us</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="container">
+  <form action="">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="day">Preffered Appointment Day</label>
+    <select id="day" name="day">
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursdays">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Saturday</option>
+    </select>
+
+    <label for="comment">Comment</label>
+    <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+​
+{% endblock %}
+​
+​
+{% block postloadjs %}
+{% endblock %}
