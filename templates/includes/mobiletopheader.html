@@ -20,26 +20,6 @@
         </form>
     </div>
 </li>
-<li class="list-inline-item dropdown">
-    <a class="text-secondary nav-link d-inline d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div><i class="fa fa-user fa-lg"></i></div>
-            <p class="my-0">My Account</p>
-        </div>
-    </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-        {% if request.user.is_authenticated %}
-            {% if request.user.is_superuser %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
-            {% endif %}
-            <a href="" class="dropdown-item"></a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-        {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-        {% endif %}
-    </div>
-</li>
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-secondary{% endif %} nav-link d-block d-lg-none" href="{% url 'viewcart' %}">
         <div class="text-center">
