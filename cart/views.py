@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, HttpResponse
+import logging
 
 # Create your views here.
+logger = logging.getLogger(__name__)
 
 
 def viewcart(request):
@@ -10,7 +12,7 @@ def viewcart(request):
 def addtocart(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get ('redirect_url')
+    redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
     
     if item_id in list(cart.keys()):
@@ -19,15 +21,16 @@ def addtocart(request, item_id):
         cart[item_id] = quantity
 
     request.session['cart'] = cart
-    return redirect (redirect_url)
+    return redirect(redirect_url)
 
 
+def removefromcart(request):
 
-def removefromcart(request, item_id):
+    item_id = request.POST.get('product_id')
 
     cart = request.session.get('cart', {})
 
-    cart.pop(item_id)
+    del cart[item_id]
 
     request.session['cart'] = cart
-    return HttpResponse(status=200)
+    return redirect('viewcart')
